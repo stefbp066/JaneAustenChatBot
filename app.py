@@ -7,7 +7,7 @@ from langchain_openai import ChatOpenAI
 from langchain_openai import OpenAIEmbeddings
 from langchain.chains import create_retrieval_chain
 from langchain_core.prompts import ChatPromptTemplate
-from flask import Flask, render_template, request, render_template_string
+from flask import Flask, render_template, request
 from langchain.chains.combine_documents import create_stuff_documents_chain
 
 app = Flask(__name__)
@@ -85,9 +85,6 @@ def index():
         except Exception as e:
             answer = f'An error occurred: {str(e)}. Please check your OpenAI API key and try again.'
     return render_template('index.html', answer=answer)
-
-def handler(event, context):
-    return awsgi.response(app, event, context)
 
 if __name__ == "__main__":
     app.run(debug=True, threaded=True)

@@ -84,13 +84,45 @@
             align-items: center;
             justify-content: center;
         }
+
+        .demo-questions {
+            background-color: white;
+            border: 1px solid #c3a6a0;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .demo-questions h5 {
+            color: #5c4033;
+            font-family: 'Georgia', serif;
+            margin-bottom: 15px;
+        }
+
+        .demo-question {
+            background-color: #fdfbfa;
+            border: 1px solid #c3a6a0;
+            border-radius: 5px;
+            padding: 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .demo-question:hover {
+            background-color: #f0e6e1;
+            transform: translateX(5px);
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+
     </style>
 </head>
 <body>
     <div class="container mt-5">
         <h1 class="text-center">Jane Austen Literary Assistant 🪶📜</h1>
         
-        <!-- Added works list section -->
+        <!-- Works list section -->
         <div class="works-list">
             <h5>This assistant contains knowledge of the following works:</h5>
             <ul>
@@ -105,11 +137,31 @@
             </ul>
         </div>
 
+        <!-- New Demo Questions Section -->
+        <div class="demo-questions">
+            <h5>Try these example questions:</h5>
+            <div class="demo-question" onclick="fillQuestion(this)">
+                Why did Jane Bennet have to stay over at Bingley's house?
+            </div>
+            <div class="demo-question" onclick="fillQuestion(this)">
+                Why does Mr. Darcy initially discourage Mr. Bingley from pursuing Jane Bennet?
+            </div>
+            <div class="demo-question" onclick="fillQuestion(this)">
+                Why does Edward Ferrars remain committed to Lucy Steele despite his growing affection for Elinor?
+            </div>
+            <div class="demo-question" onclick="fillQuestion(this)">
+                Why does Mrs. Ferrars disinherit Edward Ferrars, and how does this affect his future?
+            </div>
+            <div class="demo-question" onclick="fillQuestion(this)">
+                Why does Charlotte Lucas marry Mr. Collins?
+            </div>
+        </div>
+
         <form id="query-form" method="post" onsubmit="showLoadingSpinner()">
             <div class="form-group">
                 <label for="input_text">What would you like to know about Jane Austen's works?</label>
                 <input type="text" id="input_text" name="input_text" class="form-control" 
-                       placeholder="Ask about characters, plots, themes, or relationships across novels..." required>
+                       placeholder="Click on a sample question above or type your own..." required>
             </div>
             <button type="submit" class="btn btn-primary">Ask Question</button>
         </form>
@@ -132,6 +184,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
     <script>
+        function fillQuestion(element) {
+            // Get the question text
+            const questionText = element.innerText.trim();
+            
+            // Fill the input box
+            const inputBox = document.getElementById('input_text');
+            inputBox.value = questionText;
+            
+            // Smooth scroll to the input box
+            inputBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            inputBox.focus();
+        }
+
         function showLoadingSpinner() {
             document.getElementById('loading-overlay').style.display = 'flex';
         }
