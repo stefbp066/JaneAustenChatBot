@@ -44,11 +44,11 @@ JaneAustenChatBot/
 
 ### 1. Clone the repository:
 ```
-git clone https://github.com/yourusername/JaneAustenChatBot.git
+git clone https://github.com/aphdinh/JaneAustenChatBot.git
 cd JaneAustenChatBot
 ```
 
-### 2. Create and activate virtual environment:
+### 2. Create and activate a virtual environment:
 ```
 pyenv virtualenv 3.11.0 janeaustenchatbot
 pyenv activate janeaustenchatbot
@@ -60,14 +60,14 @@ pip install -r requirements.txt
 ```
 
 ### 4. Set up environment variables:
-Create a `.env` file in the root directory:
+Create a `.env` file in the root directory with your personal API keys or other secrets:
 ```
 OPENAI_API_KEY=your_api_key_here
 LANGCHAIN_API_KEY=your_api_key_here
 LANGCHAIN_TRACING_V2=true
 ```
 
-### 5. Process the text files and create vector database:
+### 5. Process the text files and create a vector database (with Chroma):
 ```
 python src/data_ingestion.py
 python src/data_preprocessing.py
@@ -101,7 +101,7 @@ docker run -p 5000:5000 janeaustenchatbot
 ```
 python app.py
 ```
-3. **Deploy and access the app**
+3. **Deploy and access the app!**
 
 # Acknowledgments
 We thank [Project Gutenberg](https://www.gutenberg.org/) for providing access to Jane Austen’s literary works. This project is powered by OpenAI’s GPT models, enabling nuanced and context-aware responses. The frontend design draws inspiration from Regency-era aesthetics, reflecting the historical charm of Austen’s time.
