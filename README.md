@@ -104,4 +104,4 @@ python app.py
 3. **Deploy and access the app**
 
 # Acknowledgments
-We extend our gratitude to **Project Gutenberg** for providing access to Jane Austen’s literary works. This project is powered by OpenAI’s GPT models, enabling nuanced and context-aware responses. Additionally, the frontend design draws inspiration from Regency-era aesthetics, reflecting the historical charm of Austen’s time.
+We thank [Project Gutenberg](https://www.gutenberg.org/) for providing access to Jane Austen’s literary works. This project is powered by OpenAI’s GPT models, enabling nuanced and context-aware responses. The frontend design draws inspiration from Regency-era aesthetics, reflecting the historical charm of Austen’s time.
