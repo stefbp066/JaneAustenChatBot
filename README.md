@@ -80,8 +80,8 @@ python app.py
 
 # Deployment
 
-### **Using Docker**
-Docker ensures that the chatbot runs in a consistent environment across different machines.
+### **Using Docker Locally**
+Docker ensures that the chatbot runs in a consistent environment across different machines. The following two steps can be used with the Dockerfile to build the container and image for local testing!
 
 1. **Build the Docker image:**
 ```
@@ -89,7 +89,7 @@ docker build -t janeaustenchatbot .
 ```
 2. **Run the container:**
 ```
-docker run -p 5000:5000 --env-file .env janeaustenchatbot
+docker run -p 5000:5000 janeaustenchatbot
 ```
 
 ### **Deploying on Render**
