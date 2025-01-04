@@ -97,11 +97,11 @@ docker run -p 5000:5000 --env-file .env janeaustenchatbot
    - Select the GitHub repository.
    - Choose a runtime (`Python 3.11.0`).
    - Add the necessary environment variables (`OPENAI_API_KEY`, etc.).
-3. **Set up a start command:**
+2. **Set up a start command:**
 ```
 python app.py
 ```
-4. **Deploy and access the app**
+3. **Deploy and access the app**
 
 # Acknowledgments
 We extend our gratitude to **Project Gutenberg** for providing access to Jane Austen’s literary works. This project is powered by OpenAI’s GPT models, enabling nuanced and context-aware responses. Additionally, the frontend design draws inspiration from Regency-era aesthetics, reflecting the historical charm of Austen’s time.
