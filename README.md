@@ -39,7 +39,7 @@ JaneAustenChatBot/
 ├── Dockerfile       
 └── app.py            # Main Flask application
 ```
-https://www.mermaidchart.com/raw/78f8c0b2-2ce7-4f9e-8a88-038d3cf3c0c2?theme=light&version=v0.1&format=svg
+![janeausten-rag-diagram](https://github.com/user-attachments/assets/143c5467-6a89-456a-bf02-fbc0c78ee06f)
 
 # Setup and Installation
 
